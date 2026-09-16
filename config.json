@@ -1,0 +1,42 @@
+{
+  "input": {
+    "template": "./input/image.png",
+    "data":"./input/input.json"
+  },
+
+  "output": {
+    "directory": "./output",
+    "format": "png"
+  },
+
+  "cards": {
+    "columns": 3,
+    "rows": 3,
+    "width": 1125,
+    "height": 680,
+    "start_x": 35,
+    "start_y": 35,
+    "gap_x": 68,
+    "gap_y": 220
+  },
+
+  "prints":[
+    {
+        "key":"name",
+        "x": 65,
+        "y": 300,
+        "font":"/Users/donneko/Library/Fonts/BIZUDPGothic-Bold.ttf",
+        "color": "#545454",
+        "size": "120"
+
+    },
+    {
+        "key":"name_roman",
+        "x": 70,
+        "y": 440,
+        "font":"/Users/donneko/Library/Fonts/Roboto-VariableFont_wdth,wght.ttf",
+        "color": "#545454",
+        "size": "48"
+    }
+  ]
+}

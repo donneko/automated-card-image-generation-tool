@@ -1,0 +1,16 @@
+.DS_Store
+
+
+# Environments
+.venv/
+venv/
+ENV/
+env/
+
+__pycache__/
+
+input/*
+
+output/
+
+*.env
