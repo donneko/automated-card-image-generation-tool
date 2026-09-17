@@ -6,7 +6,7 @@ def saveSomePage(pages,setting):
 
     for i in range(pagesLength):
 
-        fileNumber = "" if pagesLength > 1 else f"_{str(i).zfill(digits)}"
+        fileNumber = "" if pagesLength < 1 else f"_{str(i).zfill(digits)}"
 
         page = pages[i]
         page.save(
