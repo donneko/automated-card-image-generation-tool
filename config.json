@@ -6,7 +6,10 @@
 
   "output": {
     "directory": "./output",
-    "format": "png"
+    "name_template": "out_image",
+    "format": "png",
+    "save_one_page":"",
+    "dpi": 300
   },
 
   "cards": {
