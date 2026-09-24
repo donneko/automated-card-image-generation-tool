@@ -7,8 +7,8 @@
   "output": {
     "directory": "./output",
     "name_template": "out_image",
-    "format": "png",
-    "save_one_page":"",
+    "format": "pdf",
+    "save_one_page":"True",
     "dpi": 300
   },
 
@@ -23,23 +23,28 @@
     "gap_y": 220
   },
 
-  "prints":[
+  "scripts":[
     {
-        "key":"name",
+      "key":"name",
+      "script":"./plugin/text.py",
+      "config":{
         "x": 65,
         "y": 300,
         "font":"/Users/donneko/Library/Fonts/BIZUDPGothic-Bold.ttf",
         "color": "#545454",
         "size": "120"
-
+      }
     },
     {
-        "key":"name_roman",
+      "key":"name_roman",
+      "script":"./plugin/text.py",
+      "config":{
         "x": 70,
         "y": 440,
         "font":"/Users/donneko/Library/Fonts/Roboto-VariableFont_wdth,wght.ttf",
         "color": "#545454",
         "size": "48"
+      }
     }
   ]
 }

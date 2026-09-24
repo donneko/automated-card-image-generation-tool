@@ -18,3 +18,4 @@ def calcPosition(x,y,configCards):
     configCards["start_x"] + widthGap * x,
     configCards["start_y"] + heightGap * y
     )
+

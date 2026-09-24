@@ -3,13 +3,14 @@ from logic.calc.calc import calcCordNumber,calcPageNumber,calcPosition
 from logic.service.cord_print import cordPrint
 from logic.service.get_json import getConfig,getInputData
 from logic.service.save_pages import savePages
-from logic.service.setup import setupPrintConfig
+from logic.service.setup import setup
+from logic.service.create_data import createData
 
 def app():
     config = getConfig()
     data = getInputData(config["input"]["data"])
 
-    printDataBook = setupPrintConfig(config["prints"])
+    dataBook = setup(config["scripts"])
     cordNumber = calcCordNumber(config["cards"])
     dataLength = len(data)
     template = Image.open(config["input"]["template"])
@@ -32,8 +33,8 @@ def app():
                 if index >= dataLength:
                     break
 
-                position = calcPosition(x,y,config["cards"])
-                cordPrint(draw,printDataBook,data[index],position)
+                meta = createData(x,y,index,config["cards"])
+                cordPrint(draw,dataBook,data[index],meta)
 
         pages.append(image)
 

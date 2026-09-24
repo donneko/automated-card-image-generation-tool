@@ -1,22 +1,15 @@
-from PIL import ImageFont
+import importlib
 
-def setupPrintConfig(prints):
-    printDataBook = {}
+def setup(scripts):
+    dataBook = {}
 
-    for printConfig in prints:
+    for script in scripts:
 
+        module = importlib.import_module(script["script"])
 
-        font = ImageFont.truetype(
-            printConfig["font"],
-            int(printConfig["size"])
-        )
+        printData = module.setup(script["config"])
+        printData["__module_print__"] = module.print
 
+        dataBook[script["key"]] = printData
 
-        printDataBook[printConfig["key"]] = {
-            "x":int(printConfig["x"]),
-            "y":int(printConfig["y"]),
-            "color":printConfig["color"],
-            "font":font
-        }
-
-    return printDataBook
+    return dataBook

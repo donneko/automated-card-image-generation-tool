@@ -1,23 +1,16 @@
 from logic.service.draw_print import drawPrint
 
-def cordPrint(draw,printDataBook,data,position):
+def cordPrint(draw,dataBook,data,meta):
     for key, value in data.items():
+        meta["value"] = value
 
-        if not (key in printDataBook):
+        if not (key in dataBook):
             print(f"key: {key} が存在しません。")
             break
 
-        printData = printDataBook[key]
+        printData = dataBook[key]
+        printData["__module_print__"](draw,printData,meta)
 
-        drawPrint(draw,{
-            "font":printData["font"],
-            "position":(
-                position[0] + printData["x"],
-                position[1] + printData["y"]
-                ),
-            "text":value,
-            "color":printData["color"]
-        })
 
 
 
