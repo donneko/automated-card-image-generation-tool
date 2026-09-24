@@ -30,7 +30,7 @@
       "config":{
         "x": 65,
         "y": 300,
-        "font":"/Users/donneko/Library/Fonts/BIZUDPGothic-Bold.ttf",
+        "font":"./fonts/your-japanese-font.ttf",
         "color": "#545454",
         "size": "120"
       }
@@ -41,7 +41,7 @@
       "config":{
         "x": 70,
         "y": 440,
-        "font":"/Users/donneko/Library/Fonts/Roboto-VariableFont_wdth,wght.ttf",
+        "font":"./fonts/your-latin-font.ttf",
         "color": "#545454",
         "size": "48"
       }

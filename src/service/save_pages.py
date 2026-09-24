@@ -1,4 +1,6 @@
 
+import os
+
 def saveSomePage(pages,setting):
 
     pagesLength = len(pages)
@@ -26,6 +28,8 @@ def saveOnePage(pages,setting):
     )
 
 def savePages(pages,outputConfig):
+
+    os.makedirs(outputConfig["directory"], exist_ok=True)
 
     setting = {
         "path":f"{outputConfig["directory"]}/{outputConfig["name_template"]}",
