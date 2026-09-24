@@ -1,10 +1,10 @@
 from PIL import Image, ImageDraw
-from logic.calc.calc import calcCordNumber,calcPageNumber,calcPosition
-from logic.service.cord_print import cordPrint
-from logic.service.get_json import getConfig,getInputData
-from logic.service.save_pages import savePages
-from logic.service.setup import setup
-from logic.service.create_data import createData
+from src.calc.calc import calcCordNumber,calcPageNumber,calcPosition
+from src.service.cord_print import cordPrint
+from src.service.get_json import getConfig,getInputData
+from src.service.save_pages import savePages
+from src.service.setup import setup
+from src.service.create_data import createData
 
 def app():
     config = getConfig()

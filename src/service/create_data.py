@@ -1,4 +1,4 @@
-from logic.calc.calc import calcPosition
+from src.calc.calc import calcPosition
 
 def createData(x,y,i,configCards):
 

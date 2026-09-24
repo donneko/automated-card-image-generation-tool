@@ -1,4 +1,3 @@
-from logic.service.draw_print import drawPrint
 
 def cordPrint(draw,dataBook,data,meta):
     for key, value in data.items():
