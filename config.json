@@ -26,7 +26,7 @@
   "scripts":[
     {
       "key":"name",
-      "script":"./plugin/text.py",
+      "script":"plugin.text",
       "config":{
         "x": 65,
         "y": 300,
@@ -37,7 +37,7 @@
     },
     {
       "key":"name_roman",
-      "script":"./plugin/text.py",
+      "script":"plugin.text",
       "config":{
         "x": 70,
         "y": 440,
